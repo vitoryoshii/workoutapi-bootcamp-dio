@@ -55,5 +55,4 @@ async def query(id: UUID4, db_sessinon: DataBaseDependency) -> CategoriaOut:
                 detail=f'Categoria não encontrada no ID: {id}'
             )
 
-    
     return categoria
