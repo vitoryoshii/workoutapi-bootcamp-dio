@@ -9,6 +9,6 @@ class BaseSchema(BaseModel):
         from_attributes = True
 
 class OutMixin(BaseSchema):
-    id: Annotated[UUID4, Field(description='Identificador')]
-    creatd_at: Annotated[datetime, Field('Data de Criação')]
+    id: Annotated[UUID4, Field(description='Identificador do Atleta')]
+    created_at: Annotated[datetime, Field('Data de Criação')]
  

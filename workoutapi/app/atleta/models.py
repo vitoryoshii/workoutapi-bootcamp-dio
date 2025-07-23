@@ -6,7 +6,6 @@ from workoutapi.app.contrib.models import BaseModel
 
 class AtletaModel(BaseModel):
     __tablename__ = 'atletas'
-    __table_args__ = {'extend_existing': True}
 
     pk_id: Mapped[int] = mapped_column(Integer, primary_key=True)
     nome: Mapped[str] = mapped_column(String(50), nullable=False)
