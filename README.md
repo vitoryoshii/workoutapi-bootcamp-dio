@@ -40,29 +40,33 @@ make run
 
 ### 👤 Atletas
 
-| Método | Rota               | Descrição                            |
-|--------|--------------------|--------------------------------------|
-| GET    | `/atletas/`        | Lista todos os atletas               |
-| GET    | `/atletas/{id}`    | Retorna um atleta pelo ID            |
-| POST   | `/atletas/`        | Cria um novo atleta                  |
-| PATCH  | `/atletas/{id}`    | Atualiza um atleta                   |
-| DELETE | `/atletas/{id}`    | Deleta um atleta                     |
+| Método | Rota            | Descrição                 |
+| ------ | --------------- | ------------------------- |
+| GET    | `/atletas/`     | Lista todos os atletas    |
+| GET    | `/atletas/{id}` | Retorna um atleta pelo ID |
+| POST   | `/atletas/`     | Cria um novo atleta       |
+| PATCH  | `/atletas/{id}` | Atualiza um atleta        |
+| DELETE | `/atletas/{id}` | Deleta um atleta          |
 
 ### 🏷️ Categorias
 
-| Método | Rota                | Descrição                             |
-|--------|---------------------|---------------------------------------|
-| GET    | `/categoria/`       | Lista todas as categorias             |
-| GET    | `/categoria/{id}`   | Retorna uma categoria pelo ID         |
-| POST   | `/categoria/`       | Cria uma nova categoria               |
+| Método | Rota              | Descrição                     |
+| ------ | ----------------- | ----------------------------- |
+| GET    | `/categoria/`     | Lista todos as categorias     |
+| GET    | `/categoria/{id}` | Retorna uma categoria pelo ID |
+| POST   | `/categoria/`     | Cria uma nova categoria       |
+| PATCH  | `/categoria/{id}` | Atualiza uma categoria        |
+| DELETE | `/categoria/{id}` | Deleta uma categoria          |
 
 ### 🏫 Centros de Treinamento
 
-| Método | Rota                        | Descrição                                 |
-|--------|-----------------------------|-------------------------------------------|
-| GET    | `/centro_treinamento/`      | Lista todos os centros de treinamento     |
-| GET    | `/centro_treinamento/{id}`  | Retorna um centro de treinamento pelo ID  |
-| POST   | `/centro_treinamento/`      | Cria um novo centro de treinamento        |
+| Método | Rota                       | Descrição             |
+| ------ | -------------------------- | --------------------- |
+| GET    | `/centro_treinamento/`     | Lista todos os CT     |
+| GET    | `/centro_treinamento/{id}` | Retorna um CT pelo ID |
+| POST   | `/centro_treinamento/`     | Cria um novo CT       |
+| PATCH  | `/centro_treinamento/{id}` | Atualiza um CT        |
+| DELETE | `/centro_treinamento/{id}` | Deleta um CT          |
 
 ---
 
@@ -75,8 +79,8 @@ make run
   "categoria_id": "c540e48e-30b1-4c41-9aa1-562a70f62463",
   "centro_treinamento_id": "a123e48e-30b1-4c41-9aa1-562a70f65432"
 }
-
 ```
+
 ---
 
 ## 💡 Funcionalidades Futuras
