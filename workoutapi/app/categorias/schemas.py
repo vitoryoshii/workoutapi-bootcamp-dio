@@ -9,3 +9,6 @@ class CategoriaIn(BaseSchema):
     
 class CategoriaOut(CategoriaIn):
     id: Annotated[UUID4, Field(description='Identificador da Categoria')]
+
+class CategoriaUpdate(CategoriaIn):
+    pass

@@ -4,7 +4,7 @@ from fastapi import APIRouter, Body, HTTPException, status
 from pydantic import UUID4
 from sqlalchemy import select
 
-from workoutapi.app.atleta.schemas import AtletaIn, AtletaOut, AtletaUpdate
+from workoutapi.app.atleta.schemas import AtletaIn, AtletaOut, AtletaUpdate, AtletaDB
 from workoutapi.app.atleta.models import AtletaModel
 from workoutapi.app.categorias.models import CategoriaModel
 from workoutapi.app.centro_treinamento.models import CentroTreinamentoModel
@@ -46,7 +46,7 @@ async def post(
             detail=f'O centro de treinamento {centro_treinamento_nome} não foi encontrado.'
         )
     try:
-        atleta_out = AtletaOut(id=uuid4(), created_at=datetime.utcnow(), **atleta_in.model_dump())
+        atleta_out = AtletaDB(id=uuid4(), created_at=datetime.utcnow(), **atleta_in.model_dump())
         atleta_model = AtletaModel(**atleta_out.model_dump(exclude={'categoria', 'centro_treinamento'}))
 
         atleta_model.categoria_id = categoria.pk_id
@@ -54,10 +54,10 @@ async def post(
             
         db_session.add(atleta_model)
         await db_session.commit()
-    except Exception:
+    except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail='Ocorreu um erro ao inserir os dados no banco'
+            detail=f'Ocorreu um erro ao inserir os dados no banco: {e}'
         )
 
     return atleta_out
