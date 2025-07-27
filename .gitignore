@@ -1,0 +1,21 @@
+# Arquivos Python compilados
+__pycache__/
+*.py[cod]
+
+# Ambientes virtuais
+venv/
+env/
+.venv/
+.pyenv/
+pyvenv.cfg
+
+# Pastas locais do Windows
+Lib/
+Include/
+Scripts/
+
+# VSCode config
+.vscode/
+
+# Arquivos temporários
+*.log
